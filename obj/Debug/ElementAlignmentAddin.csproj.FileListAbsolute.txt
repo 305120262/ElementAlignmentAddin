@@ -1,0 +1,8 @@
+D:\AppDatas\VS2013\Projects\ElementAlignmentAddin\ElementAlignmentAddin\bin\Debug\ElementAlignmentAddin.dll
+D:\AppDatas\VS2013\Projects\ElementAlignmentAddin\ElementAlignmentAddin\bin\Debug\ElementAlignmentAddin.pdb
+D:\AppDatas\VS2013\Projects\ElementAlignmentAddin\ElementAlignmentAddin\obj\Debug\ElementAlignmentAddin.csprojResolveAssemblyReference.cache
+D:\AppDatas\VS2013\Projects\ElementAlignmentAddin\ElementAlignmentAddin\obj\Debug\ElementAlignmentAddin.dll
+D:\AppDatas\VS2013\Projects\ElementAlignmentAddin\ElementAlignmentAddin\obj\Debug\ElementAlignmentAddin.pdb
+D:\AppDatas\VS2013\Projects\ElementAlignmentAddin\ElementAlignmentAddin\obj\Debug\ElementAlignmentAddin.ElementListForm.resources
+D:\AppDatas\VS2013\Projects\ElementAlignmentAddin\ElementAlignmentAddin\obj\Debug\ElementAlignmentAddin.csproj.GenerateResource.Cache
+D:\AppDatas\VS2013\Projects\ElementAlignmentAddin\ElementAlignmentAddin\bin\Debug\ElementAlignmentAddin.esriAddIn

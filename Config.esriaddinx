@@ -1,0 +1,20 @@
+﻿<ESRI.Configuration xmlns="http://schemas.esri.com/Desktop/AddIns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>ElementAlignmentAddin</Name>
+  <AddInID>{7abaa1b7-b1d6-4ad7-9103-42d07bf0acea}</AddInID>
+  <Description>Align elements in ArcMap</Description>
+  <Version>1.0</Version>
+  <Image>Images\ElementAlignmentAddin.png</Image>
+  <Author>Sean</Author>
+  <Company>DolphinStudio</Company>
+  <Date>2016/11/9</Date>
+  <Targets>
+    <Target name="Desktop" version="10.4" />
+  </Targets>
+  <AddIn language="CLR" library="ElementAlignmentAddin.dll" namespace="ElementAlignmentAddin">
+    <ArcMap>
+      <Commands>
+        <Button id="DolphinStudio_ElementAlignmentAddin_AlignElementCommand" class="AlignElementCommand" message="Align Elements" caption="Align" tip="Align Elements" category="Dolphin Studio Add-In Controls" image="Images\AlignElementCommand.png" />
+      </Commands>
+    </ArcMap>
+  </AddIn>
+</ESRI.Configuration>

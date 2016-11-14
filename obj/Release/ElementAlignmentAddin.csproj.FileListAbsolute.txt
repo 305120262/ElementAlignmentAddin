@@ -1,0 +1,7 @@
+D:\AppDatas\VS2013\Projects\ElementAlignmentAddin\ElementAlignmentAddin\bin\Release\ElementAlignmentAddin.dll
+D:\AppDatas\VS2013\Projects\ElementAlignmentAddin\ElementAlignmentAddin\bin\Release\ElementAlignmentAddin.pdb
+D:\AppDatas\VS2013\Projects\ElementAlignmentAddin\ElementAlignmentAddin\obj\Release\ElementAlignmentAddin.ElementListForm.resources
+D:\AppDatas\VS2013\Projects\ElementAlignmentAddin\ElementAlignmentAddin\obj\Release\ElementAlignmentAddin.csproj.GenerateResource.Cache
+D:\AppDatas\VS2013\Projects\ElementAlignmentAddin\ElementAlignmentAddin\obj\Release\ElementAlignmentAddin.dll
+D:\AppDatas\VS2013\Projects\ElementAlignmentAddin\ElementAlignmentAddin\obj\Release\ElementAlignmentAddin.pdb
+D:\AppDatas\VS2013\Projects\ElementAlignmentAddin\ElementAlignmentAddin\bin\Release\ElementAlignmentAddin.esriAddIn
