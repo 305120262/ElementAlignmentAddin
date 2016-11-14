@@ -4,6 +4,7 @@ using System.Text;
 using System.IO;
 using ESRI.ArcGIS.Carto;
 using ESRI.ArcGIS.Geometry;
+using ESRI.ArcGIS.Display;
 
 namespace ElementAlignmentAddin
 {
@@ -24,43 +25,54 @@ namespace ElementAlignmentAddin
             IGraphicsContainer cont = ArcMap.Document.ActiveView as IGraphicsContainer;
             cont.Reset();
             IElement ele = cont.Next();
-            while(ele!=null)
+            while (ele != null)
             {
                 IElementProperties3 pros = ele as IElementProperties3;
-                if(pros.Name!="")
+                if (pros.Name != "")
                 {
                     frm.AddItem(pros.Name);
                 }
                 ele = cont.Next();
             }
             frm.ShowDialog();
-
         }
 
-        void AlignElementMethod(string name, string h, string v,string hDirection,string vDirection)
+        void AlignElementMethod(string name, string h, string v, string hDirection, string vDirection, bool isPage)
         {
             IElement targetEle=null;
-            IGraphicsContainer cont = ArcMap.Document.ActiveView as IGraphicsContainer;
-            cont.Reset();
-            IElement ele = cont.Next();
-            while (ele != null)
-            {
-                IElementProperties3 pros = ele as IElementProperties3;
-                if (pros.Name == name)
-                {
-                    targetEle = ele;
-                    break;
-                }
-                ele = cont.Next();
-            }
-
-            if (targetEle == null) return;
+            double xmin = 0;
+            double xmax = 0;
+            double ymin = 0;
+            double ymax = 0;
             IEnvelope targetEnv = new EnvelopeClass() as IEnvelope;
-            targetEle.QueryBounds(ArcMap.Document.ActiveView.ScreenDisplay, targetEnv);
-            double xmin = targetEnv.XMin;
-            double xmax = targetEnv.XMax;
-            double ymin = targetEnv.YMin;
-            double ymax = targetEnv.YMax;
+            IGraphicsContainer cont = ArcMap.Document.ActiveView as IGraphicsContainer;
+            if(!isPage)
+            {
+                cont.Reset();
+                IElement ele = cont.Next();
+                while (ele != null)
+                {
+                    IElementProperties3 pros = ele as IElementProperties3;
+                    if (pros.Name == name)
+                    {
+                        targetEle = ele;
+                        break;
+                    }
+                    ele = cont.Next();
+                }
+                if (targetEle == null) return;
+                targetEle.QueryBounds(ArcMap.Document.ActiveView.ScreenDisplay, targetEnv);
+                xmin = targetEnv.XMin;
+                xmax = targetEnv.XMax;
+                ymin = targetEnv.YMin;
+                ymax = targetEnv.YMax;
+            }
+            else
+            {
+                IPageLayout layout = ArcMap.Document.ActiveView as IPageLayout;
+                IPage pg = layout.Page;
+                pg.QuerySize(out xmax, out ymax);
+            }
 
             double vH = 0;
             double vV = 0;
@@ -79,7 +91,7 @@ namespace ElementAlignmentAddin
                 double dy = 0;
                 if(bH)
                 { 
-                    if (hDirection == "左侧")
+                    if (hDirection == "左侧Left")
                     {
                         dx = xmin - env.XMin - vH;
                     }
@@ -90,7 +102,7 @@ namespace ElementAlignmentAddin
                 }
                 if (bV)
                 {
-                    if (vDirection == "上侧")
+                    if (vDirection == "上侧Top")
                     {
                         dy = ymax - env.YMax + vV;
                     }
@@ -110,7 +122,7 @@ namespace ElementAlignmentAddin
 
         protected override void OnUpdate()
         {
-            Enabled = ArcMap.Application != null;
+            Enabled = ArcMap.Document.ActivatedView as IPageLayout != null;
         }
 
     }

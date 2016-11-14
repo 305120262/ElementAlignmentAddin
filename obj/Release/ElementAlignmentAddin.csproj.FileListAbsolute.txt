@@ -4,4 +4,5 @@ D:\AppDatas\VS2013\Projects\ElementAlignmentAddin\ElementAlignmentAddin\obj\Rele
 D:\AppDatas\VS2013\Projects\ElementAlignmentAddin\ElementAlignmentAddin\obj\Release\ElementAlignmentAddin.csproj.GenerateResource.Cache
 D:\AppDatas\VS2013\Projects\ElementAlignmentAddin\ElementAlignmentAddin\obj\Release\ElementAlignmentAddin.dll
 D:\AppDatas\VS2013\Projects\ElementAlignmentAddin\ElementAlignmentAddin\obj\Release\ElementAlignmentAddin.pdb
+D:\AppDatas\VS2013\Projects\ElementAlignmentAddin\ElementAlignmentAddin\obj\Release\ElementAlignmentAddin.csprojResolveAssemblyReference.cache
 D:\AppDatas\VS2013\Projects\ElementAlignmentAddin\ElementAlignmentAddin\bin\Release\ElementAlignmentAddin.esriAddIn

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ElementAlignmentAddin
 {
-    internal delegate void AlignElementDelegate(string name, string h, string v,string hDirection,string vDirection); 
+    internal delegate void AlignElementDelegate(string name, string h, string v,string hDirection,string vDirection,bool isPage); 
 
     public partial class ElementListForm : Form
     {
@@ -23,12 +23,17 @@ namespace ElementAlignmentAddin
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AlignHandler(listElement.Text,tbxH.Text,tbxV.Text,cbxHDirection.Text,cbxVDirection.Text);
+            AlignHandler(listElement.Text,tbxH.Text,tbxV.Text,cbxHDirection.Text,cbxVDirection.Text,this.radioButton2.Checked);
         }
 
         public void AddItem(string i)
         {
              listElement.Items.Add(i);
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            listElement.Enabled = radioButton1.Checked;
         }
     }
 }
